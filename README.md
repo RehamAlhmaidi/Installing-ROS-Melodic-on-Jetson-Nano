@@ -2,6 +2,7 @@
 
 This guide provides step-by-step instructions for installing ROS Melodic on a Jetson Nano. It includes setting up the environment, installing necessary dependencies, and configuring the system for optimal performance.
 
+---
 ## Prerequisites
 
 Before installing ROS Melodic, ensure you have:
@@ -12,6 +13,7 @@ Before installing ROS Melodic, ensure you have:
 - A **display, keyboard, and mouse** for setup
 - A **USB Wi-Fi adapter** (if not using Ethernet)
 
+--- 
 ## Step 1: Set Up Jetson Nano
 
 1. Download and flash the **Jetson Nano Developer Kit Image** from NVIDIA:
@@ -30,6 +32,7 @@ Before installing ROS Melodic, ensure you have:
      echo '/swapfile none swap sw 0 0' | sudo tee -a /etc/fstab
      ```
 
+---
 ## Step 2: Install Wi-Fi Adapter Driver (If Needed)
 
 If you are using an **802.11n Wi-Fi adapter**, follow these steps to install the driver:
@@ -49,7 +52,8 @@ If you are using an **802.11n Wi-Fi adapter**, follow these steps to install the
    sudo make dkms_install
    ```
    More details can be found [here](https://askubuntu.com/questions/1349881/how-to-install-adnet-802-11n-wifi-adapter-driver).
-
+   
+---
 ## Step 3: Install ROS Melodic
 
 1. Set up the sources and keys:
@@ -86,6 +90,7 @@ If you are using an **802.11n Wi-Fi adapter**, follow these steps to install the
    sudo apt install python-rosinstall python-rosinstall-generator python-wstool build-essential
    ```
 
+---
 ## Step 4: Verify the Installation
 
 1. Open a new terminal and run:
@@ -99,6 +104,7 @@ If you are using an **802.11n Wi-Fi adapter**, follow these steps to install the
    rosrun turtlesim turtlesim_node
    ```
 
+---
 ## Step 5: Set Up Auto-Sourcing (Optional)
 
 To ensure that the ROS environment is always sourced upon opening a terminal, add the following to `~/.bashrc`:
@@ -106,6 +112,7 @@ To ensure that the ROS environment is always sourced upon opening a terminal, ad
 source /opt/ros/melodic/setup.bash
 ```
 
+---
 ## Conclusion
 
 You have successfully installed **ROS Melodic** on your Jetson Nano! You can now start developing robotic applications using ROS.
